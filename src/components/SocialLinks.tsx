@@ -8,10 +8,10 @@ const SocialLinks = () => {
   useEffect(() => {
     const handleScroll = () => {
       const windowHeight = window.innerHeight;
-      const documentHeight = document.body.clientHeight;
+      let documentHeight = document.body.clientHeight;
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       const scrollBottom = scrollTop + windowHeight;
-
+      documentHeight = documentHeight-(windowHeight/10)
       if (scrollBottom >= documentHeight) {
         setShowSocialLinks(false);
       } else {

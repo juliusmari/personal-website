@@ -8,7 +8,7 @@ const Home = () => {
         <p className="text-yellow-300 font-semibold pb-2 max-w-md">Hi, my name is</p>
           <h1 className="text-6xl md:text-8xl font-bold pb-2 text-gray-200">Julius Mari Chan</h1>
           <h2 className="text-3xl md:text-5xl font-bold pb-2 text-gray-500">There is always one more bug to fix.</h2>
-          <p className="text-gray-500 pb-2 max-w-lg">I'm an IT student who specializes in creating, optimizing, and maintaining software with excellent debugging and problem-solving skills. Currently, Im a intern at <span className="text-yellow-300 inline hover:border-b-2 border-yellow-300"><a target="_blank" href="https://www.hoolisoftware.com/">Hooli Software.</a></span></p>
+          <p className="text-gray-500 pb-2 max-w-lg">I'm an IT student who specializes in creating, optimizing, and maintaining software with excellent debugging and problem-solving skills. Currently, I'm an intern at <span className="text-yellow-300 inline hover:border-b-2 border-yellow-300"><a target="_blank" href="https://www.hoolisoftware.com/">Hooli Software.</a></span></p>
           <Link to="portfolio" smooth duration={500} className="group text-yellow-300 w-fit px-6 py-3 my-2 flex items-center rounded-md bg-transparent border-2 border-yellow-300 cursor-pointer hover:bg-yellow-300 hover:bg-opacity-10">
             Portfolio
             <span className="group-hover:rotate-90 duration-300">
