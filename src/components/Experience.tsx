@@ -130,9 +130,9 @@ const techLinks = [
 return (
     <div id="experience" className="bg-gradient-to-b from-gray-800 to-black  min:h-screen w-full">
         <div className="max-w-screen-lg mx-auto p-4 b flex flex-col justify-center w-full h-full text-white">
-            <div className="mt-10">
+            <div>
             <p className="text-4xl text-gray-200 font-bold inline border-b-4 border-yellow-500">Experience</p>
-                <p className="py-6">These are the technologies I've worked with</p>
+                <p className="py-6">These are the technologies I've worked with.</p>
             </div>
             <div className="w-full text- grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0">
                 {
