@@ -138,7 +138,7 @@ return (
                 {
                     techLinks.map(({id, src, title, style}) => (
                     <div key={id} className={'shadow-md hover:scale-105 duration-500 py-2 rounded-lg' + " " + style}>
-                        <img src={src} alt="" className="w-20 mx-auto"/>
+                        <img src={src} alt="Loading Image" className="w-20 mx-auto"/>
                         <p className="mt-4 pb-1">{title}</p>
                     </div>
                     ))
