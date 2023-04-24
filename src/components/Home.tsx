@@ -32,7 +32,9 @@ const Home = () => {
 				<div className='flex flex-col justify-center h-full'>
 					<p
 						className={`text-yellow-300 font-semibold pb-2 max-w-md transition duration-[1000ms] ${
-							isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-5'
+							isVisible
+								? 'opacity-100 translate-x-0'
+								: 'opacity-0 translate-x-5 sm:translate-x-20'
 						}`}
 					>
 						Hi, my name is
@@ -42,7 +44,7 @@ const Home = () => {
 							isVisible ? 'opacity-100 translate-x-0' : 'opacity-0'
 						}`}
 					>
-						Julius Maris Chan
+						Julius Mari Chan
 					</h1>
 					<h2
 						className={`text-3xl md:text-5xl font-bold pb-2 text-gray-500 transition duration-[2000ms] ${
