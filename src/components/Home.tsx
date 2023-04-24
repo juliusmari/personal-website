@@ -42,7 +42,7 @@ const Home = () => {
 							isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
 						}`}
 					>
-						Julius Mari Chan
+						Julius Maris Chan
 					</h1>
 					<h2
 						className={`text-3xl md:text-5xl font-bold pb-2 text-gray-500 transition duration-[2000ms] ${
