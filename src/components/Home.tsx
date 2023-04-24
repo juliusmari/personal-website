@@ -44,7 +44,7 @@ const Home = () => {
 						className={`text-6xl md:text-8xl font-bold pb-2 text-gray-200 transition duration-[1500ms] ${
 							isVisible
 								? 'opacity-100 translate-x-0'
-								: 'opacity-0  translate-x-5 sm:translate-x-20'
+								: 'opacity-0 translate-x-5 sm:translate-x-20'
 						}`}
 					>
 						Julius Mari Chan
@@ -53,7 +53,7 @@ const Home = () => {
 						className={`text-3xl md:text-5xl font-bold pb-2 text-gray-500 transition duration-[2000ms] ${
 							isVisible
 								? 'opacity-100 translate-x-0'
-								: 'opacity-0  translate-x-5 sm:translate-x-20'
+								: 'opacity-0 translate-x-5 sm:translate-x-20'
 						}`}
 					>
 						There is always one more bug to fix.

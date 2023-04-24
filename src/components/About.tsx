@@ -15,7 +15,7 @@ const About = () => {
 				<div className='mt-5 md:mr-20'>
 					<h1
 						className={`text-4xl text-gray-200 font-bold inline border-b-4 border-yellow-300 mb-6 transition duration-[1500ms] ${
-							isVisible ? 'opacity-100' : 'opacity-0'
+							isVisible ? 'opacity-100' : 'opacity-0 translate-x-5 sm:translate-x-20'
 						}`}
 					>
 						About
@@ -23,7 +23,9 @@ const About = () => {
 					<div className='mt-10 text-gray-400'>
 						<p
 							className={`text-xl leading-loose transition duration-[1000ms] ${
-								isVisible ? 'opacity-100 translate-x-0' : 'opacity-0'
+								isVisible
+									? 'opacity-100 translate-x-0'
+									: 'opacity-0 translate-x-5 sm:translate-x-20'
 							}`}
 						>
 							I'm an IT student who specializes in creating, optimizing, and
@@ -32,7 +34,9 @@ const About = () => {
 						<br />
 						<p
 							className={`text-xl leading-loose transition duration-[1500ms] ${
-								isVisible ? 'opacity-100 translate-x-0' : 'opacity-0'
+								isVisible
+									? 'opacity-100 translate-x-0'
+									: 'opacity-0 translate-x-5 sm:translate-x-20'
 							}`}
 						>
 							My passion for programming started when I was in high school and I have
@@ -52,14 +56,18 @@ const About = () => {
 					<div className='text-center mt-6'>
 						<h2
 							className={`text-2xl font-bold transition duration-[1500ms] ${
-								isVisible ? 'opacity-100 translate-y-0' : 'opacity-0'
+								isVisible
+									? 'opacity-100 translate-y-0'
+									: 'opacity-0 translate-x-5 sm:translate-x-20'
 							}`}
 						>
 							Julius Mari
 						</h2>
 						<p
 							className={`text-lg text-gray-400 transition duration-[1500ms] ${
-								isVisible ? 'opacity-100 translate-y-0' : 'opacity-0'
+								isVisible
+									? 'opacity-100 translate-y-0'
+									: 'opacity-0 translate-x-5 sm:translate-x-20'
 							}`}
 						>
 							Software Developer

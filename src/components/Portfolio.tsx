@@ -42,7 +42,9 @@ const Portfolio = () => {
 				</div>
 				<div
 					className={`grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-4 md:px-0 transition duration-[2500ms] ${
-						isVisible ? 'opacity-100 translate-y-0' : 'opacity-0'
+						isVisible
+							? 'opacity-100 translate-y-0'
+							: 'opacity-0 translate-x-5 sm:translate-x-20'
 					}`}
 				>
 					{portfolioList.map(({ id, src }) => (
