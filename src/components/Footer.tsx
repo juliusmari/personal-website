@@ -33,7 +33,7 @@ const Footer = () => {
 	return (
 		<footer className='bg-gradient-to-b from-gray-800 to-black text-gray-300 py-4'>
 			<div
-				className={`flex justify-center space-x-2 sm:space-x-4 transition-opacity duration-300 ${
+				className={`flex justify-center space-x-2 sm:opacity-100 sm:space-x-4 transition-opacity duration-300 ${
 					showSocialLinks ? 'opacity-100' : 'opacity-0'
 				}`}
 				style={{ transition: 'opacity 0.3s ease-out' }}

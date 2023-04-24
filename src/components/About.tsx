@@ -58,7 +58,7 @@ const About = () => {
 							className={`text-2xl font-bold transition duration-[1500ms] ${
 								isVisible
 									? 'opacity-100 translate-y-0'
-									: 'opacity-0 translate-x-5 sm:translate-x-20'
+									: 'opacity-0 translate-y-5 sm:translate-y-20'
 							}`}
 						>
 							Julius Mari
@@ -67,7 +67,7 @@ const About = () => {
 							className={`text-lg text-gray-400 transition duration-[1500ms] ${
 								isVisible
 									? 'opacity-100 translate-y-0'
-									: 'opacity-0 translate-x-5 sm:translate-x-20'
+									: 'opacity-0 translate-y-5 sm:translate-y-20'
 							}`}
 						>
 							Software Developer

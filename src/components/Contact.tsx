@@ -51,13 +51,17 @@ const Contact = () => {
 					>
 						<div
 							className={`flex flex-col mb-4 transition duration-[1500ms] ${
-								isVisible ? 'opacity-100 translate-x-0' : 'opacity-0'
+								isVisible
+									? 'opacity-100 translate-x-0'
+									: 'opacity-0  translate-x-5 sm:translate-x-20'
 							}`}
 						>
 							<label
 								htmlFor='email'
 								className={`text-gray-200 font-medium mb-2  transition duration-[1500ms] ${
-									isVisible ? 'opacity-100 translate-x-0' : 'opacity-0'
+									isVisible
+										? 'opacity-100 translate-x-0'
+										: 'opacity-0 translate-x-5 sm:translate-x-20'
 								}`}
 							>
 								Name
@@ -78,7 +82,7 @@ const Contact = () => {
 							className={`flex flex-col mb-4 transition duration-[1500ms] ${
 								isVisible
 									? 'opacity-100 translate-x-0'
-									: 'opacity-0 translate-x-5 sm:translate-x-20'
+									: 'opacity-0 -translate-x-5 sm:-translate-x-20'
 							}`}
 						>
 							<label
@@ -86,7 +90,7 @@ const Contact = () => {
 								className={`text-gray-200 font-medium mb-2  transition duration-[1500ms] ${
 									isVisible
 										? 'opacity-100 translate-x-0'
-										: 'opacity-0 translate-x-5 sm:translate-x-20'
+										: 'opacity-0 -translate-x-5 sm:-translate-x-20'
 								}`}
 							>
 								Email
@@ -106,7 +110,7 @@ const Contact = () => {
 							className={`flex flex-col mb-4 transition duration-[1500ms] ${
 								isVisible
 									? 'opacity-100 translate-x-0'
-									: 'opacity-0 translate-x-5 sm:translate-x-20'
+									: 'opacity-0 translate-y-5 sm:translate-y-20'
 							}`}
 						>
 							<label
@@ -114,7 +118,7 @@ const Contact = () => {
 								className={`text-gray-200 font-medium mb-2 transition duration-[1500ms] ${
 									isVisible
 										? 'opacity-100 translate-x-0'
-										: 'opacity-0 translate-x-5 sm:translate-x-20'
+										: 'opacity-0 translate-y-5 sm:translate-y-20'
 								}`}
 							>
 								Message
@@ -137,7 +141,7 @@ const Contact = () => {
 							className={`mt-8 mx-auto text-yellow-300 w-fit px-6 py-3 my-2 flex items-center rounded-md bg-transparent border-2 border-yellow-300 cursor-pointer hover:bg-yellow-300 hover:bg-opacity-10 transition duration-[1500ms] ${
 								isVisible
 									? 'opacity-100 translate-x-0'
-									: 'opacity-0 translate-x-5 sm:translate-x-20'
+									: 'opacity-0 translate-y-5 sm:translate-y-20'
 							}`}
 							onSubmit={handleSubmit}
 						>
