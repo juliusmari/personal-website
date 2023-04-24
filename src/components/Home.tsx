@@ -25,6 +25,7 @@ const Home = () => {
 
 	return (
 		<div
+			ref={ref}
 			id='home'
 			className='h-screen w-full bg-gradient-to-b from-black via-black to-gray-800'
 		>
@@ -41,24 +42,27 @@ const Home = () => {
 					</p>
 					<h1
 						className={`text-6xl md:text-8xl font-bold pb-2 text-gray-200 transition duration-[1500ms] ${
-							isVisible ? 'opacity-100 translate-x-0' : 'opacity-0'
+							isVisible
+								? 'opacity-100 translate-x-0'
+								: 'opacity-0  translate-x-5 sm:translate-x-20'
 						}`}
 					>
 						Julius Mari Chan
 					</h1>
 					<h2
 						className={`text-3xl md:text-5xl font-bold pb-2 text-gray-500 transition duration-[2000ms] ${
-							isVisible ? 'opacity-100 translate-x-0' : 'opacity-0'
+							isVisible
+								? 'opacity-100 translate-x-0'
+								: 'opacity-0  translate-x-5 sm:translate-x-20'
 						}`}
 					>
 						There is always one more bug to fix.
 					</h2>
-					<div ref={ref}>
-						<p>{isVisible ? 'Visible' : 'Not visible'}</p>
-					</div>
 					<p
 						className={`text-gray-500 pb-2 max-w-lg transition duration-[2500ms] ${
-							isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 '
+							isVisible
+								? 'opacity-100 translate-x-0'
+								: 'opacity-0  translate-x-5 sm:translate-x-20'
 						}`}
 					>
 						I'm an IT student who specializes in creating, optimizing, and maintaining
@@ -75,7 +79,9 @@ const Home = () => {
 						smooth
 						duration={1000}
 						className={`group text-yellow-300 w-fit px-6 py-3 my-2 flex items-center rounded-md bg-transparent border-2 border-yellow-300 cursor-pointer hover:bg-yellow-300 hover:bg-opacity-10 transition duration-[3000ms] ${
-							isVisible ? 'opacity-100 translate-x-0' : 'opacity-0'
+							isVisible
+								? 'opacity-100 translate-x-0'
+								: 'opacity-0  translate-x-5 sm:translate-x-20'
 						}`}
 					>
 						Portfolio
