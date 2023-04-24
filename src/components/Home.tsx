@@ -35,7 +35,7 @@ const Home = () => {
 						className={`text-yellow-300 font-semibold pb-2 max-w-md transition duration-[1000ms] ${
 							isVisible
 								? 'opacity-100 translate-x-0'
-								: 'opacity-0 translate-x-10 sm:translate-x-20'
+								: 'opacity-0 translate-x-5 sm:translate-x-20'
 						}`}
 					>
 						Hi, my name is
@@ -44,16 +44,16 @@ const Home = () => {
 						className={`text-6xl md:text-8xl font-bold pb-2 text-gray-200 transition duration-[1500ms] ${
 							isVisible
 								? 'opacity-100 translate-x-0'
-								: 'opacity-0  translate-x-10 sm:translate-x-20'
+								: 'opacity-0  translate-x-5 sm:translate-x-20'
 						}`}
 					>
-						Julius Mari Chans
+						Julius Mari Chan
 					</h1>
 					<h2
 						className={`text-3xl md:text-5xl font-bold pb-2 text-gray-500 transition duration-[2000ms] ${
 							isVisible
 								? 'opacity-100 translate-x-0'
-								: 'opacity-0  translate-x-10 sm:translate-x-20'
+								: 'opacity-0  translate-x-5 sm:translate-x-20'
 						}`}
 					>
 						There is always one more bug to fix.
@@ -62,7 +62,7 @@ const Home = () => {
 						className={`text-gray-500 pb-2 max-w-lg transition duration-[2500ms] ${
 							isVisible
 								? 'opacity-100 translate-x-0'
-								: 'opacity-0  translate-x-10 sm:translate-x-20'
+								: 'opacity-0  translate-x-5 sm:translate-x-20'
 						}`}
 					>
 						I'm an IT student who specializes in creating, optimizing, and maintaining
@@ -81,7 +81,7 @@ const Home = () => {
 						className={`group text-yellow-300 w-fit px-6 py-3 my-2 flex items-center rounded-md bg-transparent border-2 border-yellow-300 cursor-pointer hover:bg-yellow-300 hover:bg-opacity-10 transition duration-[3000ms] ${
 							isVisible
 								? 'opacity-100 translate-x-0'
-								: 'opacity-0  translate-x-10 sm:translate-x-20'
+								: 'opacity-0  translate-x-5 sm:translate-x-20'
 						}`}
 					>
 						Portfolio
