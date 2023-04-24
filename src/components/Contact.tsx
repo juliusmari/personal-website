@@ -28,7 +28,7 @@ const Contact = () => {
 			>
 				<div className='pb-8'>
 					<h1
-						className={`text-4xl text-gray-200 font-bold inline border-b-4 border-yellow-300 mb-6 transition duration-[1500ms] ${
+						className={`text-4xl text-gray-100 font-bold inline border-b-4 border-yellow-300 mb-6 transition duration-[1500ms] ${
 							isVisible ? 'opacity-100' : 'opacity-0'
 						}`}
 					>
@@ -51,13 +51,13 @@ const Contact = () => {
 					>
 						<div
 							className={`flex flex-col mb-4 transition duration-[1500ms] ${
-								isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'
+								isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
 							}`}
 						>
 							<label
 								htmlFor='email'
-								className={`text-gray-200 font-medium mb-2  transition duration-[1500ms] ${
-									isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'
+								className={`text-gray-100 font-medium mb-2  transition duration-[1500ms] ${
+									isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
 								}`}
 							>
 								Name
@@ -76,13 +76,13 @@ const Contact = () => {
 						</div>
 						<div
 							className={`flex flex-col mb-4 transition duration-[1500ms] ${
-								isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'
+								isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
 							}`}
 						>
 							<label
 								htmlFor='name'
-								className={`text-gray-200 font-medium mb-2  transition duration-[1500ms] ${
-									isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'
+								className={`text-gray-100 font-medium mb-2  transition duration-[1500ms] ${
+									isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
 								}`}
 							>
 								Email
@@ -100,13 +100,13 @@ const Contact = () => {
 						</div>
 						<div
 							className={`flex flex-col mb-4 transition duration-[1500ms] ${
-								isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-y-20'
+								isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-y-10'
 							}`}
 						>
 							<label
 								htmlFor='message'
-								className={`text-gray-200 font-medium mb-2 transition duration-[1500ms] ${
-									isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-y-20'
+								className={`text-gray-100 font-medium mb-2 transition duration-[1500ms] ${
+									isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-y-10'
 								}`}
 							>
 								Message
@@ -127,7 +127,7 @@ const Contact = () => {
 						<button
 							type='submit'
 							className={`mt-8 mx-auto text-yellow-300 w-fit px-6 py-3 my-2 flex items-center rounded-md bg-transparent border-2 border-yellow-300 cursor-pointer hover:bg-yellow-300 hover:bg-opacity-10 transition duration-[1500ms] ${
-								isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-y-20'
+								isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-y-10'
 							}`}
 							onSubmit={handleSubmit}
 						>

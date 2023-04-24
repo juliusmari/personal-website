@@ -52,14 +52,14 @@ const About = () => {
 					<div className='text-center mt-6'>
 						<h2
 							className={`text-2xl font-bold transition duration-[1500ms] ${
-								isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+								isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-x-20'
 							}`}
 						>
 							Julius Mari
 						</h2>
 						<p
 							className={`text-lg text-gray-400 transition duration-[1500ms] ${
-								isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+								isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-x-20'
 							}`}
 						>
 							Software Developer
