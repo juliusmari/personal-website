@@ -20,7 +20,7 @@ const Contact = () => {
 	return (
 		<div
 			id='contact'
-			className='w-full overflow-x-hidden overflow-y-hidden min:h-screen bg-gradient-to-b from-black to-gray-800 p-4 text-white'
+			className='w-full overflow-x-hidden text-colorBlack overflow-y-hidden min:h-screen p-4'
 		>
 			<div
 				ref={ref}
@@ -28,7 +28,7 @@ const Contact = () => {
 			>
 				<div className='pb-8'>
 					<h1
-						className={`text-4xl text-gray-200 font-bold inline border-b-4 border-yellow-300 mb-6 transition duration-[1500ms] ${
+						className={`text-4xl text-colorBlack font-bold inline border-b-4 border-colorPurple mb-6 transition duration-[1500ms] ${
 							isVisible ? 'opacity-100' : 'opacity-0'
 						}`}
 					>
@@ -58,7 +58,7 @@ const Contact = () => {
 						>
 							<label
 								htmlFor='email'
-								className={`text-gray-200 font-medium mb-2  transition duration-[1500ms] ${
+								className={`font-medium mb-2  transition duration-[1500ms] ${
 									isVisible
 										? 'opacity-100 translate-x-0'
 										: 'opacity-0 translate-x-5 sm:translate-x-20'
@@ -75,7 +75,7 @@ const Contact = () => {
 								placeholder='Enter your Name'
 								value={name}
 								onChange={(event) => setName(event.target.value)}
-								className='p-2 bg-transparent border-2 rounded-md text-white focus:outline-none focus:border-yellow-500'
+								className='p-2 bg-transparent border-2 rounded-md  focus:outline-none focus:border-colorPurple'
 							/>
 						</div>
 						<div
@@ -87,7 +87,7 @@ const Contact = () => {
 						>
 							<label
 								htmlFor='name'
-								className={`text-gray-200 font-medium mb-2  transition duration-[1500ms] ${
+								className={` font-medium mb-2  transition duration-[1500ms] ${
 									isVisible
 										? 'opacity-100 translate-x-0'
 										: 'opacity-0 -translate-x-5 sm:-translate-x-20'
@@ -103,7 +103,7 @@ const Contact = () => {
 								placeholder='Enter your Email'
 								value={email}
 								onChange={(event) => setEmail(event.target.value)}
-								className='p-2 bg-transparent border-2 rounded-md text-white focus:outline-none focus:border-yellow-500'
+								className='p-2 bg-transparent border-2 rounded-md focus:outline-none focus:border-colorPurple'
 							/>
 						</div>
 						<div
@@ -115,7 +115,7 @@ const Contact = () => {
 						>
 							<label
 								htmlFor='message'
-								className={`text-gray-200 font-medium mb-2 transition duration-[1500ms] ${
+								className={`font-medium mb-2 transition duration-[1500ms] ${
 									isVisible
 										? 'opacity-100 translate-x-0'
 										: 'opacity-0 translate-y-5 sm:translate-y-20'
@@ -133,12 +133,12 @@ const Contact = () => {
 								rows={8}
 								value={message}
 								onChange={(event) => setMessage(event.target.value)}
-								className='p-2 bg-transparent border-2 rounded-md text-white focus:outline-none focus:border-yellow-500'
+								className='p-2 bg-transparent border-2 rounded-md focus:outline-none focus:border-colorPurple'
 							></textarea>
 						</div>
 						<button
 							type='submit'
-							className={`mt-8 mx-auto text-yellow-300 w-fit px-6 py-3 my-2 flex items-center rounded-md bg-transparent border-2 border-yellow-300 cursor-pointer hover:bg-yellow-300 hover:bg-opacity-10 transition duration-[1500ms] ${
+							className={`mt-8 mx-auto text-colorPurple font-semibold w-fit px-6 py-3 my-2 flex items-center rounded-md bg-transparent border-2 border-colorPurple cursor-pointer hover:text-white hover:bg-colorPurple transition duration-[300ms] ${
 								isVisible
 									? 'opacity-100 translate-x-0'
 									: 'opacity-0 translate-y-5 sm:translate-y-20'

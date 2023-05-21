@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-
+const colors = require('tailwindcss/colors')
 export default {
   content: [
     "./index.html",
@@ -8,6 +8,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        ...colors,
         'golang' : '#00aef7',
         'typescript' : '#2d7ac7',
         'python' : '#ffe366',
@@ -25,9 +26,13 @@ export default {
         'mysql' : '#466c87',
         'postgresql' : '#ffffff',
         'oracle' : '#f3131b',
-
+        'colorPurple' : '#6E07F3',
+        'colorBlack' : '#141c3a',
+      },
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
       }
-    },
+    }
   },
   plugins: [],
 }

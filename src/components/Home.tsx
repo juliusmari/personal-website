@@ -1,5 +1,5 @@
 import { Link } from 'react-scroll';
-import { AiOutlineRight } from 'react-icons/ai';
+
 import { RefObject, useEffect, useMemo, useRef, useState } from 'react';
 
 export function useOnScreen(ref: RefObject<HTMLElement>) {
@@ -19,29 +19,64 @@ export function useOnScreen(ref: RefObject<HTMLElement>) {
 	return isIntersecting;
 }
 
+const MovingCircle = () => {
+	const numberOfCircles = 20; // Number of circles to generate
+
+	const circles = Array.from({ length: numberOfCircles }, (_, index) => {
+		const randomTranslateX = Math.random() * 100; // Generate random value between 0 and 100
+		const randomTranslateY = Math.random() * 100; // Generate random value between 0 and 100
+		const animationDelay = Math.random() * 2; // Generate random animation delay between 0 and 2 seconds
+
+		const animationStyle = {
+			animationDelay: `${animationDelay}s`,
+		};
+
+		return (
+			<div
+				key={index}
+				className='-z-0 absolute w-24 h-24 rounded-full bg-white border-colorPurple border-2 animate-move-up'
+				style={{
+					left: `${randomTranslateX}%`,
+					top: `${randomTranslateY}%`,
+					...animationStyle,
+				}}
+			></div>
+		);
+	});
+
+	return <>{circles}</>;
+};
+
 const Home = () => {
 	const ref = useRef<HTMLDivElement>(null);
 	const isVisible = useOnScreen(ref);
 
 	return (
-		<div
-			ref={ref}
-			id='home'
-			className='h-screen w-full bg-gradient-to-b from-black via-black to-gray-800'
-		>
-			<div className='max-w-screen-lg mx-auto flex flex-col items-center h-full px-4 md:flex-row'>
-				<div className='flex flex-col justify-center h-full'>
-					<p
-						className={`text-yellow-300 font-semibold pb-2 max-w-md transition duration-[1000ms] ${
-							isVisible
-								? 'opacity-100 translate-x-0'
-								: 'opacity-0 translate-x-5 sm:translate-x-20'
-						}`}
-					>
-						Hi, my name is
-					</p>
+		<div ref={ref} id='home' className=' h-fit sm:h-screen w-full z-10'>
+			{/* <MovingCircle />
+			<style>
+				{`
+          @keyframes move-up {
+            0% {
+              transform: translateY(100vh) translateX(${Math.random() * 100}%);
+            }
+            100% {
+              transform: translateY(-50%) translateX(${Math.random() * 100}%);
+            }	
+          }
+
+          .animate-move-up {
+            animation-name: move-up;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+          }
+        `}
+			</style> */}
+			<div className='max-w-screen-lg mx-auto flex flex-col text-colorBlack items-center h-full px-4 md:flex-row'>
+				<div className='flex flex-col py-20 sm:py-0 justify-center items-center w-full h-full'>
 					<h1
-						className={`text-6xl md:text-8xl font-bold pb-2 text-gray-200 transition duration-[1500ms] ${
+						className={`text-6xl md:text-8xl font-bold pb-2 transition duration-[1500ms] ${
 							isVisible
 								? 'opacity-100 translate-x-0'
 								: 'opacity-0 translate-x-5 sm:translate-x-20'
@@ -50,7 +85,7 @@ const Home = () => {
 						Julius Mari Chan
 					</h1>
 					<h2
-						className={`text-3xl md:text-5xl font-bold pb-2 text-gray-500 transition duration-[2000ms] ${
+						className={`text-2xl md:text-3xl font-light pb-2  transition duration-[500ms] ${
 							isVisible
 								? 'opacity-100 translate-x-0'
 								: 'opacity-0 translate-x-5 sm:translate-x-20'
@@ -58,36 +93,20 @@ const Home = () => {
 					>
 						There is always one more bug to fix.
 					</h2>
-					<p
-						className={`text-gray-500 pb-2 max-w-lg transition duration-[2500ms] ${
-							isVisible
-								? 'opacity-100 translate-x-0'
-								: 'opacity-0  translate-x-5 sm:translate-x-20'
-						}`}
-					>
-						I'm an IT student who specializes in creating, optimizing, and maintaining
-						software with excellent debugging and problem-solving skills. Currently,
-						I'm an intern at{' '}
-						<span className='text-yellow-300 inline hover:border-b-2 border-yellow-300'>
-							<a target='_blank' href='https://www.hoolisoftware.com/'>
-								Hooli Software.
-							</a>
-						</span>
-					</p>
 					<Link
 						to='portfolio'
 						smooth
 						duration={1000}
-						className={`group text-yellow-300 w-fit px-6 py-3 my-2 flex items-center rounded-md bg-transparent border-2 border-yellow-300 cursor-pointer hover:bg-yellow-300 hover:bg-opacity-10 transition duration-[3000ms] ${
+						className={`group mt-10 w-fit px-6 py-3 my-2 flex items-center rounded-md bg-transparent border-2 bg-white border-colorPurple font-extrabold text-colorPurple cursor-pointer hover:text-white hover:bg-colorPurple transition duration-[300ms] ${
 							isVisible
-								? 'opacity-100 translate-x-0'
-								: 'opacity-0  translate-x-5 sm:translate-x-20'
+								? 'opacity-100 translate-x-0 '
+								: 'opacity-0  translate-y-5 sm:translate-y-20'
 						}`}
 					>
 						Portfolio
-						<span className='group-hover:rotate-90 duration-1000'>
+						{/* <span className='group-hover:rotate-90 duration-500'>
 							<AiOutlineRight size={15} className='ml-1' />
-						</span>
+						</span> */}
 					</Link>
 				</div>
 			</div>

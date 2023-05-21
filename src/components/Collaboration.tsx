@@ -1,8 +1,8 @@
 import { useRef } from 'react';
-import Sample from '../assets/Portfolio/sample.jpg';
+import Sample from '../assets/Portfolio/snap.svg';
 import { useOnScreen } from './Home';
 
-const Portfolio = () => {
+const Collaboration = () => {
 	const ref = useRef<HTMLDivElement>(null);
 	const isVisible = useOnScreen(ref);
 	const portfolioList = [
@@ -22,22 +22,23 @@ const Portfolio = () => {
 		return (
 			<div
 				ref={ref}
-				className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'
+				className='max-w-screen-lg p-4 mx-auto flex flex-col text-colorBlackjustify-center w-full h-fit md:h-full'
 			>
-				<div className='pb-8'>
+				<div className='flex flex-col pb-8 items-center w-full'>
 					<h1
-						className={`text-4xl text-gray-200 font-bold inline border-b-4 border-yellow-300 mb-6 transition duration-[1500ms] ${
+						className={`text-4xl font-bold inline mb-6 mt-20 transition duration-[1500ms] ${
 							isVisible ? 'opacity-100' : 'opacity-0'
 						}`}
 					>
-						Portfolio
+						Collaboration
 					</h1>
 					<p
-						className={`py-6 transition duration-[2000ms] ${
+						className={`pb-6 transition font-medium text-xl duration-[2000ms] ${
 							isVisible ? 'opacity-100' : 'opacity-0'
 						}`}
 					>
-						This is my work
+						{/* Here are a few past projects I've worked on. Want to see more? */}
+						I'm proud to have collaborated with some awesome projects:
 					</p>
 				</div>
 				<div
@@ -50,20 +51,19 @@ const Portfolio = () => {
 					{portfolioList.map(({ id, src }) => (
 						<div
 							key={id}
-							className='shadow-md shadow-gray-600 rounded-lg  overflow-hidden'
+							className='shadow-md shadow-gray-600 rounded-lg  overflow-hidden flex flex-col items-center'
 						>
 							<img
 								src={src}
 								alt='Sample'
-								className='rounded-md duration-200 hover:scale-105'
+								className='rounded-md duration-200 p-14 hover:scale-105'
 							/>
 							<div className='flex items-center justify-center'>
-								<button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>
-									Demo
-								</button>
-								<button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>
-									Code
-								</button>
+								<a href='https://www.snaptoapp.com/' target='_blank' rel='noreferrer'>
+									<button className='px-5 py-2 m-4 duration-200 border-2 font-semibold text-colorPurple border-colorPurple hover:text-white hover:bg-colorPurple rounded-xl'>
+										Visit Website
+									</button>
+								</a>
 							</div>
 						</div>
 					))}
@@ -84,13 +84,10 @@ const Portfolio = () => {
 		);
 	}
 	return (
-		<div
-			id='portfolio'
-			className='bg-gradient-to-b from-black to-gray-800 w-full min-h-screen text-white'
-		>
+		<div id='portfolio' className='w-full'>
 			{isHaveData ? portfolioData() : errorMessage()}
 		</div>
 	);
 };
 
-export default Portfolio;
+export default Collaboration;
