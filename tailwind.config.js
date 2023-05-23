@@ -26,7 +26,8 @@ export default {
         'mysql' : '#466c87',
         'postgresql' : '#ffffff',
         'oracle' : '#f3131b',
-        'colorPurple' : '#6E07F3',
+        'colorPurple2' : '#6E07F3',
+        'colorPurple' : '#070A52',
         'colorBlack' : '#141c3a',
       },
       animation: {

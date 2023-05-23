@@ -2,12 +2,16 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { Link } from 'react-scroll';
 
-import Logo from '../assets/J.png';
+import Logo from '../assets/logo-indigo.png';
+import Logo2 from '../assets/logo-black.png';
 
 const NavBar = () => {
 	const [nav, setNav] = useState(false);
 	const [prevScrollPos, setPrevScrollPos] = useState(0);
 	const [show, setShow] = useState(true);
+	const [isHovering, setIsHovered] = useState(false);
+	const onMouseEnter = () => setIsHovered(true);
+	const onMouseLeave = () => setIsHovered(false);
 
 	const navLinks = [
 		{ label: 'Home', link: 'home', id: '1' },
@@ -38,9 +42,17 @@ const NavBar = () => {
 				show ? 'top-0' : '-top-20'
 			} ${nav ? 'md:h-auto' : 'md:h-16'} `}
 		>
-			<div className='flex items-center flex-shrink-0 mr-6 z-20'>
+			<div
+				className='flex items-center flex-shrink-0 mr-6 z-20'
+				onMouseEnter={onMouseEnter}
+				onMouseLeave={onMouseLeave}
+			>
 				<Link to={'home'} smooth duration={500}>
-					<img src={Logo} alt='logo' className='h-auto w-12 cursor-pointer' />
+					{isHovering ? (
+						<img src={Logo} alt='logo' className='h-auto w-12 cursor-pointer' />
+					) : (
+						<img src={Logo2} alt='logo' className='h-auto w-12 cursor-pointer' />
+					)}
 				</Link>
 			</div>
 			<button

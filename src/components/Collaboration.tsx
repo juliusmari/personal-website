@@ -21,6 +21,7 @@ const Collaboration = () => {
 	function portfolioData() {
 		return (
 			<div
+				id='collaboration'
 				ref={ref}
 				className='max-w-screen-lg p-4 mx-auto flex flex-col text-colorBlackjustify-center w-full h-fit md:h-full'
 			>

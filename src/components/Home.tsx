@@ -76,13 +76,14 @@ const Home = () => {
 			<div className='max-w-screen-lg mx-auto flex flex-col text-colorBlack items-center h-full px-4 md:flex-row'>
 				<div className='flex flex-col py-20 sm:py-0 justify-center items-center w-full h-full'>
 					<h1
-						className={`text-6xl md:text-8xl font-bold pb-2 transition duration-[1500ms] ${
+						className={`text-6xl flex flex-col gap-2 sm:gap-6 sm:flex-row items-center md:text-8xl font-bold pb-2 transition duration-[1500ms] ${
 							isVisible
 								? 'opacity-100 translate-x-0'
 								: 'opacity-0 translate-x-5 sm:translate-x-20'
 						}`}
 					>
-						Julius Mari Chan
+						<span>Julius Mari</span>
+						<span>Chan</span>
 					</h1>
 					<h2
 						className={`text-2xl md:text-3xl font-light pb-2  transition duration-[500ms] ${
