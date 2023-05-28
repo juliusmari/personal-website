@@ -1,14 +1,24 @@
 import { useRef } from 'react';
-import Sample from '../assets/Portfolio/snap.svg';
+import SnaptToApp from '../assets/Portfolio/snap.svg';
+import KALMA from '../assets/Portfolio/KALMALogo.png';
 import { useOnScreen } from './Home';
 
 const Collaboration = () => {
 	const ref = useRef<HTMLDivElement>(null);
 	const isVisible = useOnScreen(ref);
+	const imageHeight = 200; // Set the desired height for the images
 	const portfolioList = [
 		{
 			id: 1,
-			src: Sample,
+			alt: 'SnapToApp',
+			src: SnaptToApp,
+			link: 'https://www.snaptoapp.com/',
+		},
+		{
+			id: 2,
+			alt: 'KALMA',
+			src: KALMA,
+			link: 'https://www.snaptoapp.com/',
 		},
 	];
 	let isHaveData;
@@ -49,18 +59,19 @@ const Collaboration = () => {
 							: 'opacity-0 translate-y-5 sm:translate-y-20'
 					}`}
 				>
-					{portfolioList.map(({ id, src }) => (
+					{portfolioList.map(({ id, src, alt, link }) => (
 						<div
 							key={id}
 							className='shadow-md shadow-gray-600 rounded-lg  overflow-hidden flex flex-col items-center'
 						>
 							<img
 								src={src}
-								alt='Sample'
-								className='rounded-md duration-200 p-14 hover:scale-105'
+								alt={alt}
+								className='rounded-md duration-200 p-5 sm:p-10 hover:scale-105'
+								style={{ height: `${imageHeight}px` }}
 							/>
 							<div className='flex items-center justify-center'>
-								<a href='https://www.snaptoapp.com/' target='_blank' rel='noreferrer'>
+								<a href={link} target='_blank' rel='noreferrer'>
 									<button className='px-5 py-2 m-4 duration-200 border-2 font-semibold text-colorPurple border-colorPurple hover:text-white hover:bg-colorPurple rounded-xl'>
 										Visit Website
 									</button>
