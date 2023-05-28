@@ -18,7 +18,7 @@ const Collaboration = () => {
 			id: 2,
 			alt: 'KALMA',
 			src: KALMA,
-			link: 'https://www.snaptoapp.com/',
+			link: 'https://play.google.com/store/apps/details?id=com.kalma.capstonev12',
 		},
 	];
 	let isHaveData;
