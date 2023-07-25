@@ -14,7 +14,6 @@ const About = () => {
 						className={`text-4xl font-bold inline border-b-4 border-white mb-6 transition duration-[1500ms] ${
 							isVisible ? 'opacity-100 ' : 'opacity-0 translate-x-5 sm:translate-x-20'
 						}`}
-						ref={ref}
 					>
 						About
 					</h1>
@@ -36,6 +35,7 @@ const About = () => {
 									? 'opacity-100 translate-x-0'
 									: 'opacity-0 translate-x-5 sm:translate-x-20'
 							}`}
+							ref={ref}
 						>
 							My passion for programming started when I was in high school and I have
 							been developing my skills ever since. I enjoy working on challenging
