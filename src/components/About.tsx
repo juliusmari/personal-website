@@ -17,7 +17,7 @@ const About = () => {
 					>
 						About
 					</h1>
-					<div className='mt-10'>
+					<div className='mt-10' ref={ref}>
 						<p
 							className={`text-xl leading-loose transition duration-[1000ms] ${
 								isVisible
@@ -35,7 +35,6 @@ const About = () => {
 									? 'opacity-100 translate-x-0'
 									: 'opacity-0 translate-x-5 sm:translate-x-20'
 							}`}
-							ref={ref}
 						>
 							My passion for programming started when I was in high school and I have
 							been developing my skills ever since. I enjoy working on challenging
@@ -43,7 +42,7 @@ const About = () => {
 						</p>
 					</div>
 				</div>
-				<div className='mt-10 md:mt-10 mb-10 md:mb-10 z-10'>
+				<div className='mt-10 md:mt-10 mb-10 md:mb-10 z-10' ref={ref}>
 					<img
 						src={Profile}
 						alt='My Profile'
