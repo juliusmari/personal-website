@@ -7,13 +7,14 @@ const About = () => {
 	const isVisible = useOnScreen(ref);
 
 	return (
-		<div id='about' className='lg:h-screen w-full flex items-center' ref={ref}>
+		<div id='about' className='lg:h-screen w-full flex items-center'>
 			<div className='max-w-screen-lg mx-auto flex flex-col-reverse md:flex-row items-center justify-center px-4 '>
 				<div className='mt-5 md:mr-20 bg-colorPurple p-10 rounded-xl z-10 text-white'>
 					<h1
 						className={`text-4xl font-bold inline border-b-4 border-white mb-6 transition duration-[1500ms] ${
 							isVisible ? 'opacity-100 ' : 'opacity-0 translate-x-5 sm:translate-x-20'
 						}`}
+						ref={ref}
 					>
 						About
 					</h1>
