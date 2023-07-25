@@ -43,7 +43,7 @@ const About = () => {
 						</p>
 					</div>
 				</div>
-				<div className='mt-10 md:mt-10 mb-10 md:mb-10 z-10' ref={ref}>
+				<div className='mt-10 md:mt-10 mb-10 md:mb-10 z-10'>
 					<img
 						src={Profile}
 						alt='My Profile'
