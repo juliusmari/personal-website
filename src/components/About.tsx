@@ -21,6 +21,7 @@ const About = () => {
 					</h1>
 					<div className='mt-10'>
 						<p
+							ref={sef}
 							className={`text-xl leading-loose transition duration-[1000ms] ${
 								isVisible2
 									? 'opacity-100 translate-x-0'
@@ -32,7 +33,6 @@ const About = () => {
 						</p>
 						<br />
 						<p
-							ref={sef}
 							className={`text-xl leading-loose transition duration-[1500ms] ${
 								isVisible2
 									? 'opacity-100 translate-x-0'
