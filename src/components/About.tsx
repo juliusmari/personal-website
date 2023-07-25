@@ -7,7 +7,7 @@ const About = () => {
 	const isVisible = useOnScreen(ref);
 
 	return (
-		<div id='about' className='lg:h-screen w-full flex items-center'>
+		<div id='about' className='lg:h-screen w-full flex items-center' ref={ref}>
 			<div className='max-w-screen-lg mx-auto flex flex-col-reverse md:flex-row items-center justify-center px-4 '>
 				<div className='mt-5 md:mr-20 bg-colorPurple p-10 rounded-xl z-10 text-white'>
 					<h1
@@ -25,7 +25,7 @@ const About = () => {
 									: 'opacity-0 translate-x-5 sm:translate-x-20'
 							}`}
 						>
-							I'm an IT student who specializes in creating, optimizing, and
+							I'm an recent IT graduate who specializes in creating, optimizing, and
 							maintaining software with excellent debugging and problem-solving skills.
 						</p>
 						<br />
@@ -67,7 +67,7 @@ const About = () => {
 									: 'opacity-0 translate-y-5 sm:translate-y-20'
 							}`}
 						>
-							Software Developer
+							Web Developer
 						</p>
 					</div>
 				</div>

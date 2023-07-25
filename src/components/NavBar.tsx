@@ -72,7 +72,7 @@ const NavBar = () => {
 					{navLinks.map((navLink) => (
 						<li
 							key={navLink.id}
-							className='block mt-4 md:inline-block md:mt-0 px-4 cursor-pointer font-medium duration-200 hover:text-colorPurple'
+							className='block mt-4 md:inline-block md:mt-0 px-4 cursor-pointer text-lg font-semibold md:font-medium duration-200 hover:text-colorPurple'
 						>
 							<Link to={navLink.link} smooth duration={500}>
 								{navLink.label}
