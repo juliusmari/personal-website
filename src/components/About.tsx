@@ -5,6 +5,8 @@ import { useOnScreen } from './Home';
 const About = () => {
 	const ref = useRef<HTMLDivElement>(null);
 	const isVisible = useOnScreen(ref);
+	const sef = useRef<HTMLDivElement>(null);
+	const isVisible2 = useOnScreen(sef);
 
 	return (
 		<div id='about' className='lg:h-screen w-full flex items-center'>
@@ -17,10 +19,10 @@ const About = () => {
 					>
 						About
 					</h1>
-					<div className='mt-10' ref={ref}>
+					<div className='mt-10' ref={sef}>
 						<p
 							className={`text-xl leading-loose transition duration-[1000ms] ${
-								isVisible
+								isVisible2
 									? 'opacity-100 translate-x-0'
 									: 'opacity-0 translate-x-5 sm:translate-x-20'
 							}`}
@@ -31,7 +33,7 @@ const About = () => {
 						<br />
 						<p
 							className={`text-xl leading-loose transition duration-[1500ms] ${
-								isVisible
+								isVisible2
 									? 'opacity-100 translate-x-0'
 									: 'opacity-0 translate-x-5 sm:translate-x-20'
 							}`}
