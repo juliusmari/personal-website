@@ -6,6 +6,8 @@ import Home from "./components/Home";
 import NavBar from "./components/NavBar";
 import SocialLinks from "./components/SocialLinks";
 import Collaboration from "./components/Collaboration";
+import TrailingCursor from "./components/Cursor";
+
 function App() {
   return (
     <div className="select-none dark:bg-[#222831] dark:text-[#EEEEEE] bg-[#EEEEEE]">
@@ -17,6 +19,7 @@ function App() {
       <Contact />
       <Footer />
       <SocialLinks />
+      <TrailingCursor />
     </div>
   );
 }
