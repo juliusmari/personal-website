@@ -65,10 +65,10 @@ const Techstacks = () => {
       id="experience"
       className="min-h-fit lg:min-h-screen w-full mt-20 py-5 flex items-center justify-center "
     >
-      <div className="max-w-screen-xl mx-auto p-4 b flex flex-col items-center justify-center w-full h-full">
+      <div className="max-w-screen-xl mx-auto p-4 b flex flex-col items-center text-center justify-center w-full h-full">
         <div className="items-center flex flex-col gap-3">
           <h1
-            className={`text-4xl  font-bold inline  transition duration-[1500ms] ${
+            className={`text-4xl font-bold inline  transition duration-[1500ms] ${
               isVisible ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -99,7 +99,7 @@ const Techstacks = () => {
                 {item.technologies.map((technology, index) => (
                   <div
                     key={`${item.id}-${index}`}
-                    className="flex flex-col items-center text-center"
+                    className="flex flex-col items-center gap-2  text-center"
                   >
                     <div
                       className="p-2 rounded-full hover:text-[#FFD369]"
@@ -112,7 +112,7 @@ const Techstacks = () => {
                     >
                       <Icon icon={technology.icon} className="text-3xl" />
                     </div>
-                    <span className="text-sm text-white font-medium">
+                    <span className="text-sm font-light">
                       {typeof technology === "string"
                         ? technology
                         : technology.name}

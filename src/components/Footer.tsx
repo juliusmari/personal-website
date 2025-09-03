@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 import { GrFacebookOption, GrLinkedinOption } from "react-icons/gr";
 import { FiMail } from "react-icons/fi";
 import { RiGithubLine } from "react-icons/ri";
+import { useDarkMode } from "../hooks/useDarkMode";
 
 const Footer = () => {
   const [showSocialLinks, setShowSocialLinks] = useState(true);
+  const darkMode = useDarkMode();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,14 +35,22 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className=" text-white py-4">
+    <footer className="py-4">
       <div
         className={`flex justify-center space-x-2 sm:opacity-100 sm:space-x-4 transition-opacity duration-300 ${
           showSocialLinks ? "opacity-100" : "opacity-0"
         }`}
         style={{ transition: "opacity 0.3s ease-out" }}
       >
-        <div className="border-2 p-2 rounded-full  hover:bg-white">
+        <div
+          className=" p-2 rounded-full hover:text-violet-900"
+          style={{
+            background: darkMode ? "#222831" : "#eeeeee",
+            boxShadow: darkMode
+              ? "4px 4px 8px #1d222a, -4px -4px 8px #272e38"
+              : "4px 4px 8px #cacaca, -4px -4px 8px #ffffff",
+          }}
+        >
           <a
             href="https://github.com/juliusmari"
             target="_blank"
@@ -49,7 +59,15 @@ const Footer = () => {
             <RiGithubLine size={20} />
           </a>
         </div>
-        <div className="border-2 p-2 rounded-full  hover:bg-white">
+        <div
+          className=" p-2 rounded-full  hover:text-blue-700 "
+          style={{
+            background: darkMode ? "#222831" : "#eeeeee",
+            boxShadow: darkMode
+              ? "4px 4px 8px #1d222a, -4px -4px 8px #272e38"
+              : "4px 4px 8px #cacaca, -4px -4px 8px #ffffff",
+          }}
+        >
           <a
             href="https://www.linkedin.com/in/julius-mari-chan-120b92270"
             target="_blank"
@@ -58,7 +76,15 @@ const Footer = () => {
             <GrLinkedinOption size={20} />
           </a>
         </div>
-        <div className="border-2 p-2 rounded-full  hover:bg-white">
+        <div
+          className=" p-2 rounded-full hover:text-red-700"
+          style={{
+            background: darkMode ? "#222831" : "#eeeeee",
+            boxShadow: darkMode
+              ? "4px 4px 8px #1d222a, -4px -4px 8px #272e38"
+              : "4px 4px 8px #cacaca, -4px -4px 8px #ffffff",
+          }}
+        >
           <a
             href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTJFPCTmlFXCtCtSrjSlcLqnTjfKqpSCvXjHWFbnjxzdcmWmndLDNbqDBfQpzpBhgRKnNV"
             target="_blank"
@@ -67,7 +93,15 @@ const Footer = () => {
             <FiMail size={20} />
           </a>
         </div>
-        <div className="border-2 p-2 rounded-full  hover:bg-white">
+        <div
+          className=" p-2 rounded-full hover:text-blue-600 "
+          style={{
+            background: darkMode ? "#222831" : "#eeeeee",
+            boxShadow: darkMode
+              ? "4px 4px 8px #1d222a, -4px -4px 8px #272e38"
+              : "4px 4px 8px #cacaca, -4px -4px 8px #ffffff",
+          }}
+        >
           <a
             href="https://web.facebook.com/ainschann/"
             target="_blank"
@@ -77,8 +111,8 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <div className="text-center mt-4">
-        <p>&copy; 2023 Julius Mari Chan</p>
+      <div className="text-center mt-4 text-sm font-semibold">
+        <p>&copy; 2023 - 2025 Julius Mari Chan</p>
       </div>
     </footer>
   );

@@ -1,9 +1,11 @@
 import React, { useRef, useState } from "react";
 import { useOnScreen } from "./Home";
+import { useDarkMode } from "../hooks/useDarkMode";
 
 const Contact = () => {
   const ref = useRef<HTMLDivElement>(null);
   const isVisible = useOnScreen(ref);
+  const darkMode = useDarkMode();
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -26,20 +28,20 @@ const Contact = () => {
         ref={ref}
         className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full"
       >
-        <div className="pb-8">
+        <div className="pb-8 text-center flex flex-col gap-3">
           <h1
-            className={`text-4xl font-bold inline border-b-4 border-colorPurple mb-6 transition duration-[1500ms] ${
+            className={`text-4xl font-bold inline  transition duration-[1500ms] ${
               isVisible ? "opacity-100" : "opacity-0"
             }`}
           >
-            Contact
+            Get in Touch
           </h1>
           <p
-            className={`py-6 transition duration-[1500ms] ${
-              isVisible ? "opacity-100" : "opacity-0"
+            className={`transition font-light text-lg duration-[1500ms] italic  ${
+              isVisible ? "opacity-100" : "opacity-0 "
             }`}
           >
-            Submit the form below to get in touch with me
+            Let's make cool stuff happen — drop me a message!
           </p>
         </div>
         <div className="flex justify-center items-center">
@@ -75,7 +77,13 @@ const Contact = () => {
                 placeholder="Enter your Name"
                 value={name}
                 onChange={(event) => setName(event.target.value)}
-                className="p-2 bg-transparent border-2 rounded-md  focus:outline-none "
+                className="p-2 rounded-md  focus:outline-none  placeholder:font-extralight placeholder:text-sm"
+                style={{
+                  background: darkMode ? "#222831" : "#eeeeee",
+                  boxShadow: darkMode
+                    ? "inset 4px 4px 8px #1d222a, inset -4px -4px 8px #272e38"
+                    : "inset 4px 4px 8px #cacaca, inset -4px -4px 8px #ffffff",
+                }}
               />
             </div>
             <div
@@ -103,7 +111,13 @@ const Contact = () => {
                 placeholder="Enter your Email"
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
-                className="p-2 bg-transparent border-2 rounded-md focus:outline-none "
+                className="p-2 rounded-md  focus:outline-none placeholder:font-extralight placeholder:text-sm"
+                style={{
+                  background: darkMode ? "#222831" : "#eeeeee",
+                  boxShadow: darkMode
+                    ? "inset 4px 4px 8px #1d222a, inset -4px -4px 8px #272e38"
+                    : "inset 4px 4px 8px #cacaca, inset -4px -4px 8px #ffffff",
+                }}
               />
             </div>
             <div
@@ -133,16 +147,28 @@ const Contact = () => {
                 rows={8}
                 value={message}
                 onChange={(event) => setMessage(event.target.value)}
-                className="p-2 bg-transparent border-2 rounded-md focus:outline-none "
+                className="p-2 rounded-md focus:outline-none  placeholder:font-extralight placeholder:text-sm"
+                style={{
+                  background: darkMode ? "#222831" : "#eeeeee",
+                  boxShadow: darkMode
+                    ? "inset 4px 4px 8px #1d222a, inset -4px -4px 8px #272e38"
+                    : "inset 4px 4px 8px #cacaca, inset -4px -4px 8px #ffffff",
+                }}
               ></textarea>
             </div>
             <button
               type="submit"
-              className={`mt-8 mx-auto  dark:text-[#E3D8C5] font-semibold w-fit px-6 py-3 my-2 flex items-center rounded-md bg-transparent border-2 border-colorPurple dark:border-[#E3D8C5] cursor-pointer hover:text-white dark:hover:text-black dark:hover:bg-[#E3D8C5]  transition duration-[300ms] ${
+              className={`mt-8 mx-auto  font-semibold w-fit px-6 py-3 my-2 flex items-center rounded-md cursor-pointer transition duration-[300ms] ${
                 isVisible
                   ? "opacity-100 translate-x-0"
                   : "opacity-0 translate-y-5 sm:translate-y-20"
               }`}
+              style={{
+                background: darkMode ? "#222831" : "#eeeeee",
+                boxShadow: darkMode
+                  ? "4px 4px 8px #1d222a, -4px -4px 8px #272e38"
+                  : "4px 4px 8px #cacaca, -4px -4px 8px #ffffff",
+              }}
               onSubmit={handleSubmit}
             >
               Let's Talk
