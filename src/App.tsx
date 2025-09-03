@@ -1,6 +1,6 @@
 import About from "./components/About";
 import Contact from "./components/Contact";
-import Experience from "./components/Experience";
+import Techstacks from "./components/Techstacks";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import NavBar from "./components/NavBar";
@@ -15,7 +15,7 @@ function App() {
       <Home />
       <About />
       <Collaboration />
-      <Experience />
+      <Techstacks />
       <Contact />
       <Footer />
       <SocialLinks />
