@@ -29,13 +29,14 @@ const Contact = () => {
         className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full"
       >
         <div className="pb-8 text-center flex flex-col gap-3">
-          <h1
-            className={`text-4xl font-bold inline  transition duration-[1500ms] ${
-              isVisible ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            Get in Touch
-          </h1>
+     <h2
+              className={`text-5xl md:text-7xl font-black leading-none tracking-tight ${
+                darkMode ? "text-white" : "text-zinc-900"
+              }`}
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Hire Me
+            </h2>
           <p
             className={`transition font-light text-lg duration-[1500ms] italic  ${
               isVisible ? "opacity-100" : "opacity-0 "

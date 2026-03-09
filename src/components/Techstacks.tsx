@@ -67,13 +67,14 @@ const Techstacks = () => {
     >
       <div className="max-w-screen-xl mx-auto p-4 b flex flex-col items-center text-center justify-center w-full h-full">
         <div className="items-center flex flex-col gap-3">
-          <h1
-            className={`text-4xl font-bold inline  transition duration-[1500ms] ${
-              isVisible ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            Tech Stack
-          </h1>
+            <h2
+              className={`text-5xl md:text-7xl font-black leading-none tracking-tight ${
+                darkMode ? "text-white" : "text-zinc-900"
+              }`}
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Tech Stack
+            </h2>
           <p
             className={`transition font-light text-xl duration-[1500ms] italic  ${
               isVisible ? "opacity-100" : "opacity-0 "
