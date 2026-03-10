@@ -342,7 +342,7 @@ const Collaboration = () => {
               Highlights
             </h2>
             <p
-              className={`mt-3 text-5xl md:text-7xl font-light italic ${
+              className={`mt-3 text-xl  font-light italic ${
                 darkMode ? "text-zinc-400" : "text-zinc-500"
               }`}
             >
